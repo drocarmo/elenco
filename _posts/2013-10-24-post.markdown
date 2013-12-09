@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Post Numero Uno"
+date:   2013-10-31 13:24:37
+---
+
+Congrats on setting up Jekyll!
+
+Go ahead to assets/sass/main.sass and begin styling it up!
+
+If you have any questions, give me a shout!
+
+[@drocarmo](https://twitter.com/drocarmo)
+
+[pe@drocarmo.com](mailto:pe@drocarmo.com?subject=Hey Pedro&amp;body=I need some help with..)

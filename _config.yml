@@ -6,7 +6,6 @@ include:
 - .htaccess
 
 exclude:
-- assets
 - README.md
 - Rakefile
 - _site

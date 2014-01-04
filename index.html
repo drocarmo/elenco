@@ -1,13 +1,27 @@
 ---
 layout: default
-title: Elenco
+title: Elenco - Chrome Extension
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
+<section>
+    <li class="new">
+      <a class="check-toggle">
+        <i></i>
+      </a>
+      <input placeholder="Add item..." />
+    </li>
+  <ul>
+    <li>
+      <a class="check-toggle item"><i></i></a>
+      <input value="Add a new item above" />
+    </li>
+    <li>
+      <a class="check-toggle item"><i></i></a>
+      <input value="Hover over me" />
+    </li>
+    <li>
+      <a class="check-toggle item"><i></i></a>
+      <input value="Click the checkmark icon!" />
+    </li>
   </ul>
-</div>
+</section>

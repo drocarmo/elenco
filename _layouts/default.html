@@ -5,29 +5,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
-        <link href="/assets/main.css" type="text/css" rel="stylesheet">
+        <link href="{{ base.url }}assets/main.css" type="text/css" rel="stylesheet">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     </head>
     <body>
-
-        <div class="site">
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                You might put some fancy footer here,<br />
-                and then some more here.
-              </p>
-            </div>
-            <div class="contact rss">
-              <p>
-                <a href="https://twitter.com/yourusername">twitter</a><br />
-                <a href="https://github.com/yourusername">github</a>
-              </p>
-            </div>
-          </div>
+      <section class="hero">
+        <div class="container">
+          Elenco <span data-typer-targets="helps you stay on track,is italian for lists,is a chrome extension,is here to help you"></span>.
         </div>
+      </section>
 
+      {{ content }}
+
+      <div class="footer">
+        <div class="container">
+          Built & Designed by <a href="https://twitter.com/drocarmo" target="_blank">Pedro Carmo</a>.
+        </div>
+      </div>
+      <script src="{{ base.url }}js/typer.js"></script>
+      <script>
+        $(function () {
+          $('[data-typer-targets]').typer();
+        });
+      </script>
     </body>
 </html>

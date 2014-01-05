@@ -296,3 +296,7 @@ $(".new input").bind('blur keyup',function(e) {
 $(document).on('click', '.check-toggle', function(){
   $(this).parent().addClass("removed");
 });
+
+$(function () {
+  $('[data-typer-targets]').typer();
+});

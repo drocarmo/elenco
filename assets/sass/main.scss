@@ -6,9 +6,13 @@ $background: #f0f0f0;
 $color-brand: #2aa876;
 $color-red: #d94f48;
 
+@mixin flex {
+  margin: 0 auto;
+}
+
 * {
   border: 0;
-  margin: 0 auto;
+  @include flex;
   padding: 0;
   vertical-align: baseline;
 }
@@ -21,41 +25,38 @@ html, body {
 
 body {
   text-align: center;
+  @include flex;
   padding: 20px;
   font-size: 18px;
-  position: relative;
-  line-height: $size;
   -webkit-backface-visibility: hidden;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 .lobster {
   font-family: "Lobster Two", cursive;
-  font-size: 52px;
   color: $color-brand;
 }
 
 .container {
-  width: 700px;
-  margin: 0 auto;
+  width: 300px;
+  @include flex;
 }
 
 .footer {
-  color: #9a9a9a;
-  position: relative;
-  bottom: 0;
-  margin-top: 100px;
-  font-size: 16px;
+  display: block;
+  position: fixed;
+  bottom: 2px;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
-.hero {
-  font-size: 36px;
-  color: #333;
+section {
   margin-top: 50px;
-  height: 150px;
 }
 
 ::-webkit-input-placeholder {
@@ -74,23 +75,10 @@ li {
   border-radius: 2px;
   padding-right: .5rem;
   background: white;
-  height: 75px;
+  height: 70px;
   overflow: hidden;
   margin: 10px auto;
-  animation: newitem $transition*2;
-  width: 500px;
-}
-
-@keyframes newitem {
-  from {
-    height: 0;
-    opacity: 0;
-  }
-  50%{
-    height: 5rem;
-    opacity: 0;
-    transform: scale(.5);
-  }
+  width: 450px;
 }
 
 
@@ -98,8 +86,6 @@ li {
   margin-top: -10px;
   height: 0;
   opacity: 0;
-  transition: transform $transition;
-  transition: opacity 1s ease-out;
 }
 
 
@@ -145,49 +131,13 @@ input {
   vertical-align: center;
 
   &:hover {
-    color: red;
+    transition: transform $transition;
   }
 }
 
 li:not(.new):hover .close {
   color: $color-red;
   transition: $transition;
-}
-
-i {
-  display: inline-block;
-  position: relative;
-  width: $size/6;
-  height: 30px;
-  background: transparent;
-  transition: $transition;
-  transform: translateX(.25rem) rotate(45deg);
-  border-radius: $size;
-
-  &:after {
-    display: block;
-    content: "";
-    position: absolute;
-    background: transparent;
-    right: 0; bottom: 0;
-    width: $size/2;
-    height: $size/6;
-    transition: $transition;
-    border-radius: $size;
-  }
-}
-
-li:not(.new):hover i {
-  transform-origin: center center;
-  content: '&times';
-  background: $color-red;
-  transform: rotate(45deg);
-
-  &:after {
-    background: $color-red;
-    width: $size;
-    transform: translate3d((($size/2) - ($size/10)),-(($size/2) - ($size/10)),0);
-  }
 }
 
 .new {

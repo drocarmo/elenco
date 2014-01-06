@@ -8,7 +8,7 @@
 	 *	Set the storage clean
 	 */
 	chrome.storage.sync.get('elencoList', function(d){
-		if (!d.elencoStore) chrome.storage.sync.set({elencoList:[]});
+		if (!d.elencoList || !d.elencoList.length) chrome.storage.sync.set({elencoList:[]});
 	});
 
 

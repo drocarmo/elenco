@@ -1,0 +1,10 @@
+// Mixing up the mixins
+
+@mixin flex {
+  margin: 0 auto;
+}
+
+@mixin transition {
+  transition: $transition;
+  -webkit-animation: transition $transition;
+}

@@ -1,0 +1,100 @@
+// Lists styles
+
+ul {
+  box-sizing: content-box;
+  width: 100%;
+}
+
+li {
+  display: flex;
+  align-content: center;
+  box-sizing: border-box;
+  padding-right: .5rem;
+  background: white;
+  height: 60px;
+  overflow: hidden;
+  width: 450px;
+  margin: 10px auto;
+  border-radius: $radius;
+}
+
+.removed {
+  margin-top: -10px;
+  height: 0;
+  opacity: 0;
+  @include transition;
+}
+
+
+input {
+  display: block;
+  font-size: 20px;
+  background: transparent;
+  position: relative;
+  padding: $padding;
+  margin-left: 10px;
+  @include transition;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 450px;
+  color: $color-background;
+
+  &#new {
+    width: 100%;
+    @include transition;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.check-toggle {
+  display: inline-block;
+  align-self: center;
+  text-align: center;
+  position: relative;
+  right: 0;
+  height: 100%;
+  width: $size;
+  padding: $padding;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close {
+  cursor: pointer;
+  color: transparent;
+  font-size: 50px;
+  vertical-align: middle;
+}
+
+li:not(.new):hover .close {
+  color: $color-red;
+  @include transition;
+}
+
+li.new {
+  // @include transition;
+  background: transparent;
+  border: 2px solid transparent;
+  ::-webkit-input-placeholder {
+    color: lighten(#282828,20%);
+  }
+}
+
+input#new {
+  text-align: center;
+  color: white;
+  // @include transition;
+}
+
+.item {
+
+  &:hover {
+    cursor: ns-resize !important;
+    @include transition;
+  }
+  &:active{
+  }
+}

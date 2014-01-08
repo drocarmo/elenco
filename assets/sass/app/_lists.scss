@@ -16,6 +16,9 @@ li {
   width: 450px;
   margin: 10px auto;
   border-radius: $radius;
+  @media screen and (max-width:$break) {
+    width: 250px;
+  }
 }
 
 .removed {
@@ -47,9 +50,13 @@ input {
   &:focus {
     outline: 0;
   }
+  @media screen and (max-width:$break) {
+    font-size:16px;
+    width: 200px;
+  }
 }
 
-.check-toggle {
+.task {
   display: inline-block;
   align-self: center;
   text-align: center;
@@ -60,13 +67,19 @@ input {
   padding: $padding;
   cursor: pointer;
   user-select: none;
+  @media screen and (max-width:$break) {
+    width: 1em;
+    height: 80%;
+  }
 }
 
 .close {
   cursor: pointer;
   color: transparent;
   font-size: 50px;
-  vertical-align: middle;
+  @media screen and (max-width:$break) {
+    font-size: 40px;
+  }
 }
 
 li:not(.new):hover .close {
@@ -87,14 +100,4 @@ input#new {
   text-align: center;
   color: white;
   // @include transition;
-}
-
-.item {
-
-  &:hover {
-    cursor: ns-resize !important;
-    @include transition;
-  }
-  &:active{
-  }
 }

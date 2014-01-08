@@ -58,6 +58,9 @@ li {
   width: 450px;
   margin: 10px auto;
   border-radius: 2px; }
+  @media screen and (max-width: 500px) {
+    li {
+      width: 250px; } }
 
 .removed {
   margin-top: -10px;
@@ -85,8 +88,12 @@ input {
     -webkit-animation: transition 0.75s; }
   input:focus {
     outline: 0; }
+  @media screen and (max-width: 500px) {
+    input {
+      font-size: 16px;
+      width: 200px; } }
 
-.check-toggle {
+.task {
   display: inline-block;
   align-self: center;
   text-align: center;
@@ -97,12 +104,18 @@ input {
   padding: 0.5rem;
   cursor: pointer;
   user-select: none; }
+  @media screen and (max-width: 500px) {
+    .task {
+      width: 1em;
+      height: 80%; } }
 
 .close {
   cursor: pointer;
   color: transparent;
-  font-size: 50px;
-  vertical-align: middle; }
+  font-size: 50px; }
+  @media screen and (max-width: 500px) {
+    .close {
+      font-size: 40px; } }
 
 li:not(.new):hover .close {
   color: #d94f48;
@@ -118,11 +131,6 @@ li.new {
 input#new {
   text-align: center;
   color: white; }
-
-.item:hover {
-  cursor: ns-resize !important;
-  transition: 0.75s;
-  -webkit-animation: transition 0.75s; }
 
 .animated {
   -webkit-animation-fill-mode: both;

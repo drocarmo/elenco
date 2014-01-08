@@ -17,7 +17,7 @@ li {
   margin: 10px auto;
   border-radius: $radius;
   @media screen and (max-width:$break) {
-    width: 250px;
+    width: $break/2;
   }
 }
 
@@ -36,7 +36,6 @@ input {
   position: relative;
   padding: $padding;
   margin-left: 10px;
-  @include transition;
   overflow: hidden;
   white-space: nowrap;
   width: 450px;
@@ -44,16 +43,17 @@ input {
 
   &#new {
     width: 100%;
-    @include transition;
   }
 
   &:focus {
     outline: 0;
   }
+
   @media screen and (max-width:$break) {
     font-size:16px;
     width: 200px;
   }
+
 }
 
 .task {
@@ -92,7 +92,7 @@ li.new {
   background: transparent;
   border: 2px solid transparent;
   ::-webkit-input-placeholder {
-    color: lighten(#282828,20%);
+    color: lighten($color-background,20%);
   }
 }
 

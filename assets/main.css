@@ -76,16 +76,12 @@ input {
   position: relative;
   padding: 0.5rem;
   margin-left: 10px;
-  transition: 0.75s;
-  -webkit-animation: transition 0.75s;
   overflow: hidden;
   white-space: nowrap;
   width: 450px;
   color: #282828; }
   input#new {
-    width: 100%;
-    transition: 0.75s;
-    -webkit-animation: transition 0.75s; }
+    width: 100%; }
   input:focus {
     outline: 0; }
   @media screen and (max-width: 500px) {

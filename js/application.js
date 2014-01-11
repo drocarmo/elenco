@@ -24,7 +24,7 @@ $(".new input").bind('blur keyup',function(e) {
     if(item !== ""){
       var listitem = '<li>'
         + '<input value="' + item + '" placeholder="Add item..." />'
-        + '<a class="task">'
+        + '<a class="check-toggle">'
         + '<span class="close">&times;</span>'
         + '</a>'
         + '</li>'

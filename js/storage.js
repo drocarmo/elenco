@@ -21,6 +21,24 @@
 		if (!cb) throw 'No callback passed to elencoStore#getItems()';
 		getAll(cb);
 	};
+
+	/**
+	 *	Update an item
+	 *	@method updateItem
+	 *	@param {Number} index
+	 *	@param {String} text
+	 *	@param {Function} cb
+	 */
+	elencoStore.updateItem = function(index, text, cb) {
+		index = parseInt(index, 10);
+
+		getAll(function(items){
+			items[index] = text;
+			setAll(items, function(e){
+				cb();
+			});
+		});
+	};
 		
 	/**
 	 *	Add an item to the store

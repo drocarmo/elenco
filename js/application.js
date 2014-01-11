@@ -31,27 +31,37 @@ $(".new input").bind('blur keyup',function(e) {
 
       $(this).val('').parent().after(listitem);
       $(this).focus();
-      storage.addItem(item, function(e){
 
-      });
+      var index = 0;
+      $('input.item').each(function(el){
+	    $(el).attr('data-index', index);
+		index++;
+	  });
+      storage.addItem(item, function(e){ });
     }
   }
 });
 
-$(document).on('click', '.task', function(){
+$(document).on('keyup', 'input.item', function(){
+  var index = $(this).attr('data-index'),
+      text = $(this).val();
+  storage.updateItem(index, text, function(){ });
+});
+
+$(document).on('click', '.check-toggle', function(){
   $(this).parent().addClass("removed");
   var item = $(this).siblings('input').val();
   storage.removeItem(item);
 });
 
 function fillList (data) {
-  data.forEach(function(item){
-    var listitem = '<li>'
-      + '<input value="' + item + '" placeholder="Add item..." />'
-      + '<a class="task">'
-      + '<span class="close">&times;</span>'
-      + '</a>'
-      + '</li>';
-    $list.append(listitem);
-  });
+	data.forEach(function(item, i){
+	  var listitem = '<li>'
+		  + '<input class="item" data-index="'+i+'" value="' + item + '" placeholder="Add item..." />'
+		  + '<a class="check-toggle">'
+		  + '<span class="close">&times;</span>'
+		  + '</a>'
+		  + '</li>';
+	  $list.append(listitem);
+	});
 };

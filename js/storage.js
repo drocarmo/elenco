@@ -3,7 +3,7 @@
 ;(function(w){
 
 	var elencoStore = {};
-	
+
 	/**
 	 *	Set the storage clean
 	 */
@@ -39,10 +39,10 @@
 			});
 		});
 	};
-		
+
 	/**
 	 *	Add an item to the store
-	 *	@method addItem 
+	 *	@method addItem
 	 *	@param {String} item - eg: 'this is my item from the list'
 	 *	@param {Function} callback
 	 */
@@ -59,7 +59,7 @@
 
 	/**
 	 *	Remove an item from the store
-	 *	@method removeItem 
+	 *	@method removeItem
 	 *	@param {String} item - eg: 'this is my item from the list'
 	 *	@param {Function} callback
 	 */

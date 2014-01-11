@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Elenco",
-  "description":"Manage your tasks",
+  "description":"Elenco helps you stay on track, with every new tab.",
   "version":"0.1",
   "permissions": [
     "storage"
@@ -14,7 +14,7 @@
   },
   "browser_action": {
   	"default_title":"Elenco",
-    "default_icon":"/assets/images/icon.png"
+	"default_icon":"/assets/images/icon.png"
   },
   "chrome_url_overrides": {
   	"newtab":"index.html"

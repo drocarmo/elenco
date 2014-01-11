@@ -24,7 +24,7 @@ $(".new input").bind('blur keyup',function(e) {
     if(item !== ""){
       var listitem = '<li>'
         + '<input value="' + item + '" placeholder="Add item..." />'
-        + '<a class="check-toggle">'
+        + '<a class="close-toggle">'
         + '<span class="close">&times;</span>'
         + '</a>'
         + '</li>'
@@ -48,7 +48,7 @@ $(document).on('keyup', 'input.item', function(){
   storage.updateItem(index, text, function(){ });
 });
 
-$(document).on('click', '.check-toggle', function(){
+$(document).on('click', '.close-toggle', function(){
   $(this).parent().addClass("removed");
   var item = $(this).siblings('input').val();
   storage.removeItem(item);
@@ -58,7 +58,7 @@ function fillList (data) {
 	data.forEach(function(item, i){
 	  var listitem = '<li>'
 		  + '<input class="item" data-index="'+i+'" value="' + item + '" placeholder="Add item..." />'
-		  + '<a class="check-toggle">'
+		  + '<a class="close-toggle">'
 		  + '<span class="close">&times;</span>'
 		  + '</a>'
 		  + '</li>';

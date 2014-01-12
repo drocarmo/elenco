@@ -27,7 +27,7 @@
 
 ##### License
 
-Elenco is built by Pedro Carmo (@drocarmo) and TJ Krusinski (@TJkrusinski). We're open to any feedback or feature requests.
+Elenco is built by Pedro Carmo ([@drocarmo](https://twitter.com/drocarmo)) and TJ Krusinski ([@TJkrusinski](https://twitter.com/TJkrusinski)). We're open to any feedback or feature requests.
 
 >>>>>>>
 

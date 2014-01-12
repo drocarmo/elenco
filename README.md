@@ -11,3 +11,7 @@ Elenco works just like a standard todo list, and syncs all Chrome browsers your 
 ### Removing tasks
 
 ![Remove Task](http://i.imgur.com/LN8OpVr.gif)
+
+## License
+
+MIT

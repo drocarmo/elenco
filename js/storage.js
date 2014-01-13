@@ -127,7 +127,7 @@
 	function setAll (arr, cb) {
 		arr = arr || [];
 		chrome.storage.sync.set({elencoList:arr}, cb);
-	};
+	}
 
 	/**
 	 *	Get all list items
@@ -139,13 +139,13 @@
 		chrome.storage.sync.get('elencoList', function(data){
 			cb(data.elencoList || []);
 		});
-	};
+	}
 
 	/**
 	 *	No Operation
 	 *	@api private
 	 */
-	function noop () { };
+	function noop () { }
 
 	w.elencoStore = elencoStore;
 

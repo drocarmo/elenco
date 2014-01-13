@@ -16,8 +16,8 @@ storage.getItems(function(data){
 $html = $("html");
 $list = $("ul");
 
-$(".new input").bind('blur keyup',function(e) {
-  if (e.type == 'blur' || e.keyCode == '13') {
+$(".new input").bind('keyup',function(e) {
+  if (e.keyCode === '13') {
 
     var item = $(this).val();
 

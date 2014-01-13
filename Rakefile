@@ -3,7 +3,7 @@ require 'rake'
 require 'yaml'
 
 # Load the configuration file
-config = YAML.load_file("_config.yml")
+config = YAML.load_file("config.yml")
 
 # Default Rake
 desc "compile and run the site"

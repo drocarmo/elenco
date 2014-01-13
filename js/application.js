@@ -45,7 +45,7 @@ $(".new input").bind('blur keyup',function(e) {
 $(document).on('keyup', 'input.item', function(){
   var index = $(this).attr('data-index'),
       text = $(this).val();
-  storage.updateItem(index, text, function(){ });
+  storage.updateItem(index, text, $.noop);
 });
 
 $(document).on('click', '.close-toggle', function(){

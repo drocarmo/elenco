@@ -5,53 +5,13 @@
 // *************
 
 var storage = window.elencoStore;
+var $list = $("ul");
 
-storage.getItems(function(data){
+storage.getItems(function(data) {
   if (data.length) {
     $('li[data-default=yes]').remove();
     fillList(data);
   }
-});
-
-var $html = $("html");
-var $list = $("ul");
-
-$(".new input").bind('blur keyup',function(e) {
-  if (e.type === 'blur' || e.keyCode === '13') {
-
-    var item = $(this).val();
-
-    if(item !== "") {
-      var listitem = '<li>' +
-        '<input value="' + item + '" placeholder="Add item..." />' +
-        '<a class="close-toggle">' +
-        '<span class="close">&times;</span>' +
-        '</a>' +
-        '</li>';
-
-      $(this).val('').parent().after(listitem);
-      $(this).focus();
-
-      var index = 0;
-      $('input.item').each(function(el){
-        $(el).attr('data-index', index);
-        index += 1;
-      });
-      storage.addItem(item, function(e){ });
-    }
-  }
-});
-
-$(document).on('keyup', 'input.item', function(){
-  var index = $(this).attr('data-index'),
-      text = $(this).val();
-  storage.updateItem(index, text, function(){ });
-});
-
-$(document).on('click', '.close-toggle', function(){
-  $(this).parent().addClass("removed");
-  var item = $(this).siblings('input').val();
-  storage.removeItem(item);
 });
 
 function fillList(data) {
@@ -65,3 +25,41 @@ function fillList(data) {
     $list.append(listitem);
   });
 }
+
+$("#new").on('keyup',function(e) {
+  if (e.keyCode === 13) {
+    var item = $(this).val();
+
+    if (item) {
+      var listitem = '<li>' +
+        '<input value="' + item + '" placeholder="Add item..." />' +
+        '<a class="close-toggle">' +
+        '<span class="close">&times;</span>' +
+        '</a>' +
+        '</li>';
+
+      $(this).val('');
+      $list.append(listitem);
+      $(this).focus();
+
+      var index = 0;
+      $('input.item').each(function(el){
+        $(el).attr('data-index', index);
+        index += 1;
+      });
+      storage.addItem(item, $.noop);
+    }
+  }
+});
+
+$(document).on('keyup', 'input.item', function(){
+  var index = $(this).attr('data-index'),
+      text = $(this).val();
+  storage.updateItem(index, text, $.noop);
+});
+
+$(document).on('click', '.close-toggle', function() {
+  $(this).parent().addClass("removed");
+  var item = $(this).siblings('input').val();
+  storage.removeItem(item);
+});

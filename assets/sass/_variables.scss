@@ -4,9 +4,10 @@ $transition : .75s;
 
 // Colors
 
-$color-background: #282828;
+$color-white: #fff;
+$color-black: #282828;
 $color-gray: #dadada;
-$color-brand: #2aa876;
+$color-green: #2aa876;
 $color-red: #d94f48;
 
 // Sizes
@@ -20,7 +21,3 @@ $padding : .5rem;
 
 $lobster: "Lobster Two", cursive;
 $pt-sans: "PT Sans", sans-serif;
-
-// Media break point
-
-$break: 500px;

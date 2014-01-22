@@ -1,0 +1,21 @@
+.hero {
+  display: block;
+  background-color: $color-green;
+  color: $color-white;
+  height: 100%;
+  h1 {
+    text-align: center;
+    @include flex;
+  }
+  h2 {
+    color: lighten($color-gray,10%);
+  }
+  section.about {
+    display: block;
+    float: left;
+    width: 45%;
+    height: 100%;
+    margin-right: 5%;
+    margin-top: 50px;
+  }
+}

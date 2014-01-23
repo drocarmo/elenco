@@ -1,43 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
-        <link href="{{ base.url }}assets/main.css" type="text/css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=PT+Sans|Lobster+Two:700' rel='stylesheet' type='text/css'>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    </head>
+
+    {% include head.html %}
+
     <body>
-      <section class="hero">
-        <div class="container">
-          <h1><span class="logo">Elenco </span></h1>
-          <section class="about">
-            <h2><span class="icon-chrome"></span> Google Extension</h2>
-            <p>Elenco serves as a to do app for the Chrome browser. It syncs tasks to all the Chrome browsers your google account is logged into.</p>
-          </section>
-          <section class="about">
-            <h2><span class="icon-globe"></span> Open Source</h2>
-            <p>Elenco is being built out in the <a href="https://github.com/drocarmo/elenco" target="_blank">open</a>. Everything is open-sourced and open to feedback and/or feature requests. It is what you want it to be.</p>
-          </section>
-        </div>
-      </section>
+
+      {% include hero.html %}
 
       {{ content }}
 
-      <div class="footer">
-        <div class="container">
-          <p>
-            Made by <a href="https://twitter.com/drocarmo" target="_blank">Pedro</a> and <a href="https://twitter.com/TJkrusinski" target="_blank">TJ</a> with love.
-          </p>
-        </div>
-      </div>
-      <script src="{{ base.url }}js/application.js"></script>
-      <script>
-        $(function () {
-          $('[data-typer-targets]').typer();
-        });
-      </script>
+      {% include footer.html %}
+
     </body>
 </html>

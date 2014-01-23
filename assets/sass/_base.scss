@@ -4,20 +4,18 @@
   border: 0;
   padding: 0;
   @include flex;
-  vertical-align: baseline;
 }
 
 html, body {
   height: 100%;
-  font-family: "PT Sans", sans-serif;
   background: $color-white;
 }
 
 body {
-  line-height: 1.65;
   -webkit-backface-visibility: hidden;
 }
 
 a {
   color: inherit;
+  text-decoration: underline;
 }

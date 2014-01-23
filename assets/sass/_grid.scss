@@ -1,6 +1,33 @@
-// Dig grid
+// Flex
+
+@mixin flex {
+  margin: 0 auto;
+}
+
+// Screen sizes
+
+@mixin screen-medium {
+  @media screen and (min-width: $screen-medium) {
+    @content;
+  }
+}
+
+@mixin screen-large {
+  @media screen and (min-width: $screen-large) {
+    @content;
+  }
+}
+
+// Container
 
 .container {
-  width: 700px;
+  position: relative;
   @include flex;
+  width: 85%;
+  @include screen-medium {
+    width: 500px;
+  }
+  @include screen-large {
+    width: 800px;
+  }
 }

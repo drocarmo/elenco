@@ -1,27 +1,37 @@
 // Typography
 
-.logo {
-  font-family: "Lobster Two", cursive;
-  font-size: 48px;
-  color: darken($color-green,18%);
-  padding-right: 5px;
+body {
+  font-family: $pt-sans;
+  line-height: $line-height;
+}
+
+h2,h3 {
+  font-family: $poly;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+p {
+  font-size: 1.150em;
 }
 
 // Iconography
 
 @font-face {
-  font-family: 'elenco';
-  src: url('fonts/elenco.eot?35738411');
-  src: url('fonts/elenco.eot?35738411#iefix') format('embedded-opentype'),
-       url('fonts/elenco.woff?35738411') format('woff'),
-       url('fonts/elenco.ttf?35738411') format('truetype'),
-       url('fonts/elenco.svg?35738411#elenco') format('svg');
+  font-family: 'entypo';
+  src: url('fonts/entypo.eot?35738411');
+  src: url('fonts/entypo.eot?35738411#iefix') format('embedded-opentype'),
+       url('fonts/entypo.woff?35738411') format('woff'),
+       url('fonts/entypo.ttf?35738411') format('truetype'),
+       url('fonts/entypo.svg?35738411#entypo') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "elenco";
+  font-family: "entypo";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -36,6 +46,8 @@
   margin-left: .2em;
 }
 
-.icon-chrome:before { content: '\e810'; } /* '' */
+.icon-chrome:before { content: '\e800'; } /* '' */
+.icon-zero:before { content: '\e803'; } /* '' */
+.icon-sync:before { content: '\e802'; } /* '' */
 .icon-globe:before { content: '\e801'; } /* '' */
-.icon-github:before { content: '\e802'; } /* '' */
+.icon-github:before { content: '\e804'; } /* '' */

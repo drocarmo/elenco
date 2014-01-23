@@ -1,21 +1,47 @@
-.hero {
+section.hero {
   display: block;
-  background-color: $color-green;
-  color: $color-white;
-  height: 100%;
-  h1 {
+  height: 130%;
+  @include screen-medium {
+    height: 120%;
+  }
+  @include screen-large {
+    height: 100%;
+  }
+  section.headline {
+    display: block;
     text-align: center;
     @include flex;
+    @include screen-medium {
+      margin-bottom: 100px;
+    }
+    h1 {
+      font-family: $lobster;
+      font-size: 40px;
+      color: $color-green;
+      @include screen-medium {
+        font-size: 48px;
+      }
+    }
   }
-  h2 {
-    color: lighten($color-gray,10%);
+  p {
+    color: darken($color-gray,15%);
   }
-  section.about {
+  section.feature {
     display: block;
+    position: relative;
     float: left;
-    width: 45%;
-    height: 100%;
-    margin-right: 5%;
-    margin-top: 50px;
+    width: 100%;
+    @include screen-medium {
+      width: 40%;
+      height: 300px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    @include screen-large {
+      height: 220px;
+    }
+  }
+  :nth-child(2n) {
+    margin-right: 0%;
   }
 }

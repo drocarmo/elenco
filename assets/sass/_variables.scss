@@ -1,3 +1,8 @@
+// Screen Sizes
+
+$screen-medium: 600px;
+$screen-large: 900px;
+
 // Animate
 
 $transition : .75s;
@@ -8,16 +13,14 @@ $color-white: #fff;
 $color-black: #282828;
 $color-gray: #dadada;
 $color-green: #2aa876;
-$color-red: #d94f48;
 
 // Sizes
 
-$radius: 2px;
-$listwidth : 20rem;
-$size : 3rem;
-$padding : .5rem;
+$radius: 3px;
+$line-height: 1.65;
 
 // Typefaces
 
 $lobster: "Lobster Two", cursive;
 $pt-sans: "PT Sans", sans-serif;
+$poly: "Poly", serif;

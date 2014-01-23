@@ -1,0 +1,15 @@
+section.example {
+  display: none;
+  @include screen-medium {
+    display: block;
+    background: $color-black;
+    height: 500px;
+    .gif {
+      display: block;
+      height: 600px;
+      width: 530px;
+      background: url(images/elenco.gif) center no-repeat;
+      background-size: 100%;
+    }
+  }
+}

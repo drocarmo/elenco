@@ -281,56 +281,55 @@ a {
   color: inherit;
   text-decoration: underline; }
 
-section.hero {
-  display: block;
-  height: 130%; }
-  @media screen and (min-width: 600px) {
-    section.hero {
-      height: 120%; } }
-  @media screen and (min-width: 900px) {
-    section.hero {
-      height: 100%; } }
-  section.hero section.headline {
+.hero {
+  display: block; }
+  .hero .headline {
     display: block;
     text-align: center;
     margin: 0 auto; }
     @media screen and (min-width: 600px) {
-      section.hero section.headline {
+      .hero .headline {
         margin-bottom: 100px; } }
-    section.hero section.headline h1 {
+    .hero .headline h1 {
       font-family: "Lobster Two", cursive;
       font-size: 40px;
       color: #2aa876; }
       @media screen and (min-width: 600px) {
-        section.hero section.headline h1 {
+        .hero .headline h1 {
           font-size: 48px; } }
-  section.hero p {
-    color: #b4b4b4; }
-  section.hero section.feature {
-    display: block;
-    position: relative;
-    float: left;
-    width: 100%; }
-    @media screen and (min-width: 600px) {
-      section.hero section.feature {
-        width: 40%;
-        height: 300px;
-        margin-left: 5%;
-        margin-right: 5%; } }
-    @media screen and (min-width: 900px) {
-      section.hero section.feature {
-        height: 220px; } }
-  section.hero :nth-child(2n) {
-    margin-right: 0%; }
+  .hero p {
+    color: #8d8d8d; }
+  .hero .features {
+    margin-bottom: 40px; }
+    .hero .features:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .hero .features .feature {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%; }
+      @media screen and (min-width: 600px) {
+        .hero .features .feature {
+          width: 40%;
+          height: 300px;
+          margin-left: 5%;
+          margin-right: 5%; } }
+      @media screen and (min-width: 900px) {
+        .hero .features .feature {
+          height: 220px; } }
+      .hero .features .feature:nth-child(2n) {
+        margin-right: 0%; }
 
-section.example {
+.example {
   display: none; }
   @media screen and (min-width: 600px) {
-    section.example {
+    .example {
       display: block;
       background: #282828;
       height: 500px; }
-      section.example .gif {
+      .example .gif {
         display: block;
         height: 600px;
         width: 530px;

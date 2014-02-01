@@ -12,7 +12,7 @@
     a {
       display: inline-block;
       width: 100%;
-      padding: 20px 0px;
+      padding: 12px 0px;
       border-radius: $radius;
       background-color: $color-green;
       color: $color-white;
@@ -22,9 +22,9 @@
         background-color: darken($color-green,3%);
       }
       @include screen-medium {
-        margin: 0 40px;
-        width: auto;
-        padding: 20px 25px;
+        margin: 0 15px;
+        padding: 15px 0px;
+        width: 30%;
       }
     }
   }

@@ -3,7 +3,7 @@
 
   "name": "Elenco",
   "description":"Elenco helps you stay on track, with every new tab.",
-  "version":"0.1",
+  "version":"0.2",
   "permissions": [
     "storage"
   ],

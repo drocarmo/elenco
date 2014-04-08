@@ -7,6 +7,10 @@
 var storage = window.elencoStore;
 var $list = $("ul");
 
+storage.getColorScheme(function(scheme) {
+  $("body").data("scheme", scheme).addClass(scheme);
+});
+
 storage.getItems(function(data) {
   if (data.length) {
     $('li[data-default=yes]').remove();
@@ -62,4 +66,15 @@ $(document).on('click', '.close-toggle', function() {
   $(this).parent().addClass("removed");
   var item = $(this).siblings('input').val();
   storage.removeItem(item);
+});
+
+// Color Scheme Selection
+
+$(".colorscheme").on("click", function() {
+  var el = $(this);
+  var curScheme = $("body").data("scheme");
+  $("body").removeClass(curScheme);
+  var scheme = el.data("scheme");
+  $("body").data("scheme", scheme).addClass(scheme);
+  storage.setColorScheme(scheme);
 });

@@ -1,25 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>New Tab</title>
-        <meta name="viewport" content="width=device-width">
-        <link href="{{ base.url }}assets/main.css" type="text/css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=PT+Sans|Lobster+Two:700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
-        <link rel="stylesheet" href="http://jqueryui.com/sortable/resources/demos/style.css" />
-    </head>
+
+    {% include head.html %}
+
     <body class="animated fadeInDown">
 
       {{ content }}
 
-      <div class="footer">
-        <a href="https://github.com/drocarmo/elenco" target="_blank"><span class="lobster">Elenco</span></a>
-      </div>
-      <script src="/js/jquery.js"></script>
-      <script src="/js/jqueryui.js"></script>
-      <script src="/js/storage.js"></script>
-      <script src="/js/application.js"></script>
+      {% include footer.html %}
+
     </body>
 </html>

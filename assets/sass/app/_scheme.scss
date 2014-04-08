@@ -1,0 +1,113 @@
+//
+// Background-color scheme styles
+//
+
+// Color Scheme Positioning
+
+div.color-opt {
+  position: absolute;
+  right: 20px;
+  > a {
+    display: block;
+    margin: 0px auto 20px auto;
+  }
+}
+
+// Static Button States
+
+a.black {
+  @include schemeButton {
+    background-color: $color-black;
+    &:hover {
+      background-color: darken($color-black,10%);
+    }
+  }
+}
+
+a.gray {
+  @include schemeButton {
+    background-color: $color-gray;
+    &:hover {
+      background-color: darken($color-gray,10%);
+    }
+  }
+}
+
+a.tan {
+  @include schemeButton {
+    background-color: $color-tan;
+    &:hover {
+      background-color: darken($color-tan,10%);
+    }
+  }
+}
+
+a.white {
+  @include schemeButton {
+    background-color: $color-white;
+    &:hover {
+      background-color: darken($color-white,10%);
+    }
+  }
+}
+
+// Active States
+
+// TODO
+// *Probably should write a mixin for all of these*
+
+body.black {
+  background-color: $color-black;
+  a.black {
+    border: $radius solid $color-brand;
+  }
+}
+
+body.gray {
+  background-color: $color-gray;
+  a.gray {
+    border: $radius solid $color-brand;
+  }
+  li.new {
+    ::-webkit-input-placeholder {
+      color: lighten($color-black,50%);
+    }
+  }
+  input#new {
+    color: $color-black;
+  }
+}
+
+body.tan {
+  background-color: $color-tan;
+  a.tan {
+    border: $radius solid $color-brand;
+  }
+  li.new {
+    ::-webkit-input-placeholder {
+      color: lighten($color-black,60%);
+    }
+  }
+  input#new {
+    color: $color-black;
+  }
+}
+
+body.white {
+  background-color: $color-white;
+  a.white {
+    border: $radius solid $color-brand;
+  }
+  li {
+    background: lighten($color-gray,10%);
+  }
+  li.new {
+    background: transparent;
+    ::-webkit-input-placeholder {
+      color: lighten($color-black,70%);
+    }
+  }
+  input#new {
+    color: $color-black;
+  }
+}

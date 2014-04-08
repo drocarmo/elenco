@@ -10,7 +10,7 @@ li {
   align-content: center;
   box-sizing: border-box;
   padding-right: .5rem;
-  background: white;
+  background: $color-white;
   height: 60px;
   overflow: hidden;
   width: 450px;
@@ -39,7 +39,7 @@ input {
   overflow: hidden;
   white-space: nowrap;
   width: 450px;
-  color: $color-background;
+  color: $color-black;
 
   &#new {
     width: 100%;
@@ -90,14 +90,12 @@ li:not(.new):hover .close {
 li.new {
   // @include transition;
   background: transparent;
-  border: 2px solid transparent;
   ::-webkit-input-placeholder {
-    color: lighten($color-background,20%);
+    color: lighten($color-black,20%);
   }
 }
 
 input#new {
   text-align: center;
-  color: white;
-  // @include transition;
+  color: $color-white;
 }

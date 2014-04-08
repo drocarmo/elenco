@@ -8,3 +8,10 @@
   transition: $transition;
   -webkit-animation: transition $transition;
 }
+
+@mixin schemeButton {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  @content;
+}

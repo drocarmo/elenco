@@ -141,10 +141,33 @@
 		});
 	}
 
+	/*
+	*
+	* Store color schemes selection
+	*
+	*/
+
+	elencoStore.setColorScheme = function(scheme) {
+		chrome.storage.sync.set({colorScheme: scheme});
+	};
+
+	/*
+	*
+	* Get color scheme
+	*
+	*/
+
+	elencoStore.getColorScheme = function(cb) {
+		chrome.storage.sync.get('colorScheme', function(data) {
+			cb(data.colorScheme);
+		});
+	}
+
 	/**
 	 *	No Operation
 	 *	@api private
 	 */
+
 	function noop () { }
 
 	w.elencoStore = elencoStore;

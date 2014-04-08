@@ -5,7 +5,7 @@
 }
 
 ::selection {
-  background-color: $color-background;
+  background-color: $color-black;
 }
 
 * {
@@ -15,8 +15,7 @@
 }
 
 html, body {
-  height: 100%;
-  background: $color-background;
+  height: auto;
 }
 
 body {
@@ -27,6 +26,13 @@ body {
   -webkit-backface-visibility: hidden;
 }
 
+footer {
+  width: auto;
+  position:absolute;
+  bottom:0;
+  height:50px;
+}
+
 section {
   margin-top: 50px;
 }
@@ -34,14 +40,4 @@ section {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-.footer {
-  display: block;
-  position: relative;
-  bottom: $radius;
-  width: 100%;
-  left: 0;
-  right: 0;
-  padding-top: 20px;
 }

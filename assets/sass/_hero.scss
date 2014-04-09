@@ -1,47 +1,62 @@
 .hero {
   display: block;
+  background: $color-black;
+  overflow: hidden;
+  height: 400px;
+
+  @include screen-medium {
+    height: 500px;
+  }
+
+  @include screen-large {
+    height: 600px;
+  }
+
   .headline {
     display: block;
     text-align: center;
     @include flex;
+
     @include screen-medium {
-      margin-bottom: 100px;
+      padding-top: 50px;
     }
+
     h1 {
+      margin: 0 auto;
       font-family: $lobster;
-      font-size: 40px;
+      font-size: 30px;
       color: $color-green;
+
       @include screen-medium {
-        font-size: 48px;
+        font-size: 36px;
       }
     }
-  }
-  p {
-    color: darken($color-gray,30%);
-  }
-  .features {
-    margin-bottom: 40px;
-    &:after {
-      content:"";
-      display:table;
-      clear:both;
+
+    h2 {
+      color: darken($color-gray,50%);
     }
-    .feature {
-      display: block;
-      position: relative;
-      float: left;
+  }
+
+  .laptop {
+    position: relative;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    bottom: -80px;
+
+    img {
       width: 100%;
-      @include screen-medium {
-        width: 40%;
-        height: 300px;
-        margin-left: 5%;
-        margin-right: 5%;
+    }
+
+    @include screen-large {
+      bottom: -175px;
+      left: 110px;
+
+      &:hover {
+        bottom: -90px;
       }
-      @include screen-large {
-        height: 220px;
-      }
-      &:nth-child(2n) {
-        margin-right: 0%;
+
+      img {
+        width: 70%;
       }
     }
   }

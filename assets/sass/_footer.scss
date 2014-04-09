@@ -1,29 +1,45 @@
 .footer {
   display: block;
-  background-color: $color-black;
-  color: darken($color-gray,50%);
-  font-size: 16px;
+  color: darken($color-gray, 10%);
   padding-bottom: 40px;
   text-align: center;
-  section.download {
-    display: block;
+
+  .motto {
+    margin: 100px auto;
+    font-family: $poly;
+    font-size: 1.5em;
+    text-align: center;
+    color: $color-black;
+  }
+
+  .download {
     @include flex;
     margin-bottom: 100px;
+
     a {
-      display: inline-block;
+      font-family: $poly;
+      font-size: 18px;
       width: 100%;
-      padding: 12px 0px;
+      display: block;
+      margin: 20px 0;
+      padding: 12px 0;
       border-radius: $radius;
-      background-color: $color-green;
-      color: $color-white;
+      border: 2px solid $color-green;
+      color: $color-green;
       text-decoration: none;
-      margin-top: 20px;
-      &:hover,&:active {
-        background-color: darken($color-green,3%);
+      -webkit-transition: .2s ease-in-out;
+      transition: .2s ease-in-out;
+
+      &:hover,
+      &:active {
+        background-color: $color-green;
+        color: $color-white;
       }
+
       @include screen-medium {
+        display: inline-block;
         margin: 0 15px;
-        padding: 15px 0px;
+        padding: 15px 0;
         width: 30%;
       }
     }

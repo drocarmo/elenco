@@ -6,16 +6,14 @@
   @include flex;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   background: $color-white;
 }
 
-body {
-  -webkit-backface-visibility: hidden;
-}
-
-a {
-  color: inherit;
-  text-decoration: underline;
+::selection {
+  background: $color-black;
+  color: white;
+  text-shadow: none;
 }

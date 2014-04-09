@@ -1,0 +1,34 @@
+.features {
+  @include flex;
+
+  @include screen-medium {
+    margin: 100px auto;
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .feature {
+    padding: 25px 0;
+
+    @include screen-medium {
+      padding: 0;
+      float: left;
+      width: 40%;
+      height: 300px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    @include screen-large {
+      height: 250px;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0%;
+    }
+  }
+}

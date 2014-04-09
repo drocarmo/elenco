@@ -24,9 +24,11 @@
   position: relative;
   @include flex;
   width: 85%;
+
   @include screen-medium {
-    width: 500px;
+    width: 80%;
   }
+
   @include screen-large {
     width: 800px;
   }

@@ -318,14 +318,15 @@ body {
     .hero .headline h2 {
       color: #5a5a5a; }
   .hero .laptop {
-    position: relative;
+    position: absolute;
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    bottom: -80px; }
+    bottom: -350px; }
     .hero .laptop img {
       width: 100%; }
     @media screen and (min-width: 900px) {
       .hero .laptop {
+        position: relative;
         bottom: -175px;
         left: 110px; }
         .hero .laptop:hover {

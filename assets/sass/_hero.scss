@@ -38,16 +38,17 @@
   }
 
   .laptop {
-    position: relative;
+    position: absolute;
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    bottom: -80px;
+    bottom: -350px;
 
     img {
       width: 100%;
     }
 
     @include screen-large {
+      position: relative;
       bottom: -175px;
       left: 110px;
 

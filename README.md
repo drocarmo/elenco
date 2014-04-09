@@ -19,12 +19,6 @@
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-##### Features (Add or remove tasks with real-time data syncing)
-
-![Add Task](http://i.imgur.com/cUVc8zN.gif)
-
-![Remove Task](http://i.imgur.com/LN8OpVr.gif)
-
 ##### License
 
 Elenco is built by Pedro Carmo ([@drocarmo](https://twitter.com/drocarmo)) and TJ Krusinski ([@TJkrusinski](https://twitter.com/TJkrusinski)). We're open to any feedback or feature requests.

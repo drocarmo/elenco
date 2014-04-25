@@ -291,7 +291,11 @@ body {
 
 .hero {
   display: block;
-  background: #282828;
+  background-color: #2aa876;
+  background: -moz-linear-gradient(top, #2aa876 0%, #2c8fec 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2aa876), color-stop(100%, #2c8fec));
+  background: -webkit-linear-gradient(top, #2aa876 0%, #2c8fec 100%);
+  background: -o-linear-gradient(top, #2aa876 0%, #2c8fec 100%);
   overflow: hidden;
   height: 400px; }
   @media screen and (min-width: 600px) {
@@ -311,12 +315,12 @@ body {
       margin: 0 auto;
       font-family: "Lobster Two", cursive;
       font-size: 30px;
-      color: #2aa876; }
+      color: white; }
       @media screen and (min-width: 600px) {
         .hero .headline h1 {
           font-size: 36px; } }
     .hero .headline h2 {
-      color: #5a5a5a; }
+      color: white; }
   .hero .laptop {
     position: relative;
     -webkit-transition: .5s ease-in-out;
@@ -360,7 +364,7 @@ body {
 
 .footer {
   display: block;
-  color: #c1c1c1;
+  color: #cdcdcd;
   padding-bottom: 40px;
   text-align: center; }
   .footer .motto {

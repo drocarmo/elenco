@@ -1,8 +1,5 @@
 .hero {
-  display: block;
-  @include gradient($color-green, $color-blue);
-  overflow: hidden;
-  height: 400px;
+  height: auto;
 
   @include screen-medium {
     height: 500px;
@@ -12,20 +9,52 @@
     height: 600px;
   }
 
-  .headline {
-    display: block;
-    text-align: center;
-    @include flex;
+  .laptop {
+    display: none;
+
+    img {
+      width: 100%;
+    }
 
     @include screen-medium {
+      display: block;
+      float: left;
+      margin-top: 150px;
+      width: 65%;
+
+      img {
+        width: 90%;
+      }
+    }
+  }
+
+  .headline {
+    margin-top: 20px;
+
+    @include screen-medium {
+      float: left;
+      margin-top: 120px;
       padding-top: 50px;
+      width: 35%;
+    }
+
+    img {
+      height: 40px;
+      margin-top: 4px;
+      margin-right: 10px;
+      border-radius: 8px;
+      float: left;
+
+      @include screen-medium {
+        height: 50px;
+      }
     }
 
     h1 {
       margin: 0 auto;
       font-family: $lobster;
       font-size: 30px;
-      color: $color-white;
+      color: $color-black;
 
       @include screen-medium {
         font-size: 36px;
@@ -33,31 +62,9 @@
     }
 
     h2 {
-      color: $color-white;
+      font-size: 20px;
+      color: $color-black;
     }
   }
 
-  .laptop {
-    position: relative;
-    -webkit-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    bottom: -80px;
-
-    img {
-      width: 100%;
-    }
-
-    @include screen-large {
-      bottom: -175px;
-      left: 110px;
-
-      &:hover {
-        bottom: -90px;
-      }
-
-      img {
-        width: 70%;
-      }
-    }
-  }
 }

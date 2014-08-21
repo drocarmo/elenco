@@ -1,0 +1,31 @@
+.button {
+  @include flex;
+  margin-bottom: 100px;
+
+  a {
+    text-align: center;
+    font-family: $poly;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    margin: 20px 0;
+    padding: 12px 0;
+    border-radius: $radius;
+    background-color: $color-green;
+    color: $color-white;
+    text-decoration: none;
+    -webkit-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out;
+
+    &:hover,
+    &:active {
+      background-color: lighten($color-green, 5%);
+    }
+
+    @include screen-medium {
+      display: inline-block;
+      padding: 15px 0;
+      width: 80%;
+    }
+  }
+}

@@ -289,59 +289,85 @@ body {
   color: white;
   text-shadow: none; }
 
+.button {
+  margin: 0 auto;
+  margin-bottom: 100px; }
+  .button a {
+    text-align: center;
+    font-family: "Poly", serif;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    margin: 20px 0;
+    padding: 12px 0;
+    border-radius: 3px;
+    background-color: #2aa876;
+    color: white;
+    text-decoration: none;
+    -webkit-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out; }
+    .button a:hover, .button a:active {
+      background-color: #2fbc84; }
+    @media screen and (min-width: 600px) {
+      .button a {
+        display: inline-block;
+        padding: 15px 0;
+        width: 80%; } }
+
 .hero {
-  display: block;
-  background-color: #2aa876;
-  background: -moz-linear-gradient(top, #2aa876 0%, #2c8fec 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2aa876), color-stop(100%, #2c8fec));
-  background: -webkit-linear-gradient(top, #2aa876 0%, #2c8fec 100%);
-  background: -o-linear-gradient(top, #2aa876 0%, #2c8fec 100%);
-  overflow: hidden;
-  height: 400px; }
+  height: auto; }
   @media screen and (min-width: 600px) {
     .hero {
       height: 500px; } }
   @media screen and (min-width: 900px) {
     .hero {
       height: 600px; } }
+  .hero .laptop {
+    display: none; }
+    .hero .laptop img {
+      width: 100%; }
+    @media screen and (min-width: 600px) {
+      .hero .laptop {
+        display: block;
+        float: left;
+        margin-top: 150px;
+        width: 65%; }
+        .hero .laptop img {
+          width: 90%; } }
   .hero .headline {
-    display: block;
-    text-align: center;
-    margin: 0 auto; }
+    margin-top: 20px; }
     @media screen and (min-width: 600px) {
       .hero .headline {
-        padding-top: 50px; } }
+        float: left;
+        margin-top: 120px;
+        padding-top: 50px;
+        width: 35%; } }
+    .hero .headline img {
+      height: 40px;
+      margin-top: 4px;
+      margin-right: 10px;
+      border-radius: 8px;
+      float: left; }
+      @media screen and (min-width: 600px) {
+        .hero .headline img {
+          height: 50px; } }
     .hero .headline h1 {
       margin: 0 auto;
       font-family: "Lobster Two", cursive;
       font-size: 30px;
-      color: white; }
+      color: #282828; }
       @media screen and (min-width: 600px) {
         .hero .headline h1 {
           font-size: 36px; } }
     .hero .headline h2 {
-      color: white; }
-  .hero .laptop {
-    position: relative;
-    -webkit-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    bottom: -80px; }
-    .hero .laptop img {
-      width: 100%; }
-    @media screen and (min-width: 900px) {
-      .hero .laptop {
-        bottom: -175px;
-        left: 110px; }
-        .hero .laptop:hover {
-          bottom: -90px; }
-        .hero .laptop img {
-          width: 70%; } }
+      font-size: 20px;
+      color: #282828; }
 
 .features {
   margin: 0 auto; }
   @media screen and (min-width: 600px) {
     .features {
-      margin: 100px auto; } }
+      margin: 20px auto; } }
   .features:after {
     content: "";
     display: table;
@@ -368,11 +394,16 @@ body {
   padding-bottom: 40px;
   text-align: center; }
   .footer .motto {
-    margin: 100px auto;
-    font-family: "Poly", serif;
-    font-size: 1.5em;
-    text-align: center;
-    color: #282828; }
+    display: none; }
+    @media screen and (min-width: 600px) {
+      .footer .motto {
+        display: block;
+        margin: 100px auto;
+        font-family: "Poly", serif;
+        font-size: 24px;
+        text-align: center;
+        color: #282828;
+        border-left: 4px solid #dadada; } }
   .footer .download {
     margin: 0 auto;
     margin-bottom: 100px; }

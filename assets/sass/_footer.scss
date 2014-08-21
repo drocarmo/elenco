@@ -5,11 +5,17 @@
   text-align: center;
 
   .motto {
-    margin: 100px auto;
-    font-family: $poly;
-    font-size: 1.5em;
-    text-align: center;
-    color: $color-black;
+    display: none;
+
+    @include screen-medium {
+      display: block;
+      margin: 100px auto;
+      font-family: $poly;
+      font-size: 24px;
+      text-align: center;
+      color: $color-black;
+      border-left: 4px solid $color-gray;
+    }
   }
 
   .download {
